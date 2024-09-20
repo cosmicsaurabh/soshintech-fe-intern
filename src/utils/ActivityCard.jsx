@@ -20,7 +20,7 @@ const ActivityCard = ({ title, date, description,actionText }) => {
 export default ActivityCard;
 const styles = {
   card: {
-    backgroundColor: '#4c51bf', 
+    backgroundColor: '#161E54', 
     color: '#fff',
     padding: '16px',
     borderRadius: '8px',
@@ -46,7 +46,7 @@ const styles = {
     fontSize: '14px',
   },
   button: {
-    backgroundColor: '#f56565', 
+    backgroundColor: '#FF5151', 
     color: '#fff',
     padding: '8px 12px',
     borderRadius: '4px',

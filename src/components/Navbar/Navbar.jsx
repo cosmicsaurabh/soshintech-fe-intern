@@ -9,7 +9,7 @@ import { useResponsive } from "../../context/ResponsiveContext";
 
 const Navbar = () => {
   const { handleToggleSidebar,isMobile } = useResponsive();
-  const [userData, setUserData] = useState("");
+  const [userData, setUserData] = useState({});
   const [activeDropdown, setActiveDropdown] = useState(null); 
   const [notifications, setNotifications] = useState([]);
   const [messages, setMessages] = useState([]);
@@ -28,7 +28,7 @@ const Navbar = () => {
     <nav style={styles.navbarContainer}>
       <div style={styles.navbarLeftItems}>
         <div style={styles.iconsContainer}>
-          <IconButton icon={FiMenu} onClick={handleToggleSidebar} size={23} />
+          <IconButton role="button" icon={FiMenu} onClick={handleToggleSidebar} size={23} />
         </div>
         <div style={styles.iconsContainer}>
           <SearchBar />
@@ -38,6 +38,7 @@ const Navbar = () => {
       <div style={styles.navbarRightItems}>
         <div style={styles.iconsContainer}>
           <IconButton
+          role="button"
             icon={FiBell}
             size={23}
             onClick={() => handleDropdownToggle("notifications")}
@@ -50,6 +51,7 @@ const Navbar = () => {
 
         <div style={styles.iconsContainer}>
           <IconButton
+          role="button"
             icon={FiMessageSquare}
             size={23}
             onClick={() => handleDropdownToggle("messages")}
@@ -70,6 +72,7 @@ const Navbar = () => {
             />
             {!isMobile && <span style={styles.profileName}>{userData.username}</span>}
             <IconButton
+            role="button"
               icon={FiChevronDown}
               onClick={() => handleDropdownToggle("user")}
               size={23}
